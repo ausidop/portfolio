@@ -1,22 +1,12 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Grid,
-  theme,
-  Text,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ColorModeSwitcher } from './utils/ColorModeSwitcher';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <Text>testing test</Text>
-        </Grid>
-      </Box>
+      <Nav />
     </ChakraProvider>
   );
 }
