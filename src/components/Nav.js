@@ -38,9 +38,11 @@ const Nav = () => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Text fontSize="lg" ml={3}>
-              Chergang Chang
-            </Text>
+            <Link>
+              <Text fontSize="lg" ml={3}>
+                Chergang Chang
+              </Text>
+            </Link>
           </Heading>
         </Flex>
 
@@ -59,7 +61,16 @@ const Nav = () => {
                 bg: useColorModeValue('gray.200', 'gray.700'),
               }}
             >
-              Work
+              Skills
+            </Link>
+            <Link
+              p={3}
+              _hover={{
+                textDecoration: 'none',
+                bg: useColorModeValue('gray.200', 'gray.700'),
+              }}
+            >
+              Project
             </Link>
             <Link
               p={3}
