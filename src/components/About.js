@@ -2,7 +2,7 @@ import { Box, Container, Heading, useColorModeValue } from '@chakra-ui/react';
 
 const About = () => {
   return (
-    <Container>
+    <Container id='about'>
       <Box
         borderRadius="lg"
         my={10}
@@ -15,7 +15,7 @@ const About = () => {
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
+          <Heading as="h2" variant="page-title" align='center'>
             Chergang Chang
           </Heading>
           <p>Software developer</p>
