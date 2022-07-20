@@ -10,7 +10,6 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Stack,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -38,7 +37,7 @@ const Nav = () => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Link>
+            <Link href='#'>
               <Text fontSize="lg" ml={3}>
                 Chergang Chang
               </Text>
@@ -55,6 +54,7 @@ const Nav = () => {
         >
           <HStack spacing={4}>
             <Link
+            href='#skills'
               p={3}
               _hover={{
                 textDecoration: 'none',
@@ -84,8 +84,19 @@ const Nav = () => {
           </HStack>
 
           <HStack>
-            <IconButton size="md" aria-label="Linkedin" icon={<FiLinkedin />} />
-            <IconButton size="md" aria-label="Github" icon={<FiGithub />} />
+            <Link
+              href="https://www.linkedin.com/in/chergang-chang-496661139/"
+              isExternal
+            >
+              <IconButton
+                size="md"
+                aria-label="Linkedin"
+                icon={<FiLinkedin />}
+              />
+            </Link>
+            <Link href="https://github.com/ausidop" isExternal>
+              <IconButton size="md" aria-label="Github" icon={<FiGithub />} />
+            </Link>
           </HStack>
         </Flex>
 
@@ -101,7 +112,8 @@ const Nav = () => {
               />
               <MenuList>
                 <MenuItem as={Link}>About</MenuItem>
-                <MenuItem as={Link}>Work</MenuItem>
+                <MenuItem as={Link}>Skills</MenuItem>
+                <MenuItem as={Link}>Project</MenuItem>
                 <MenuItem as={Link}>Contact</MenuItem>
               </MenuList>
             </Menu>

@@ -1,23 +1,17 @@
 import React from 'react';
 import { useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 export const ColorModeSwitcher = props => {
   const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue('dark', 'light');
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   return (
     <IconButton
-      size="md"
-      fontSize="lg"
-      aria-label={`Switch to ${text} mode`}
-      variant="ghost"
-      color="current"
-      marginLeft="2"
+      aria-label="Toggle theme"
+      marginLeft={2}
+      colorScheme={useColorModeValue('purple', 'orange')}
+      icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
       onClick={toggleColorMode}
-      icon={<SwitchIcon />}
-      {...props}
-    />
+    ></IconButton>
   );
 };
