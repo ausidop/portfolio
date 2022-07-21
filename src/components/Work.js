@@ -14,7 +14,7 @@ import netflix from '../assets/img/netflix-clone.png';
 import test from '../assets/img/javascript.png';
 import { FiEye, FiGithub } from 'react-icons/fi';
 
-const GridItem = ({ thumbnail, title, link, children }) => (
+const GridItem = ({ thumbnail, title, link, github, children }) => (
   <Box w="100%" align="center">
     <Image
       src={thumbnail}
@@ -30,12 +30,24 @@ const GridItem = ({ thumbnail, title, link, children }) => (
       <Text fontSize={14}>{children}</Text>
     </Box>
     <VStack h={100}>
-      <Link href={link} isExternal>
+      <Link
+        href={link}
+        isExternal
+        _hover={{
+          textDecoration: 'none',
+        }}
+      >
         <Button leftIcon={<FiEye />} colorScheme="teal" w={140} mb={3}>
           Live Version
         </Button>
       </Link>
-      <Link href={link} isExternal>
+      <Link
+        href={github}
+        isExternal
+        _hover={{
+          textDecoration: 'none',
+        }}
+      >
         <Button leftIcon={<FiGithub />} colorScheme="teal" w={140}>
           GitHub
         </Button>
@@ -46,22 +58,29 @@ const GridItem = ({ thumbnail, title, link, children }) => (
 
 const Work = () => {
   return (
-    <Container>
-      <Heading as={'h3'} fontSize={20} mb={4}>
+    <Container minH={'85vh'} id="project">
+      <Box minH={'6vh'}></Box>
+      <Heading as={'h3'} fontSize={20} my={4}>
         Projects
       </Heading>
       <Divider my={6} />
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <GridItem thumbnail={test} title="Portfolio Website" link="#">
-          A Portfolio website using React.js, Chakra UI and Three.js.
+        <GridItem
+          thumbnail={test}
+          title="Portfolio Website"
+          link="http://chergang-chang.ml/"
+          github="https://github.com/ausidop/portfolio"
+        >
+          A Portfolio website using React.js, Chakra UI and hosted by Netlify.
         </GridItem>
         <GridItem
           thumbnail={netflix}
           title="Netflix Clone"
           link="https://netflix-clone-88070.web.app/"
+          github="https://github.com/ausidop/Netflix-Clone"
         >
           A Netflix clone website using React.js, Redux, IMDB API and hosted by
-          firebase.
+          Firebase.
         </GridItem>
       </SimpleGrid>
     </Container>

@@ -2,27 +2,39 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
+  Center,
   Container,
-  Heading,
   Link,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import resume from '../assets/Chergang Chang.pdf';
+import Cat from './Cat';
 
 const About = () => {
   return (
-    <Container id="about">
-      <Box
+    <Container id="about" minH={'55vh'}>
+      <Cat />
+      <Center
         borderRadius="lg"
-        my={'5'}
+        boxShadow={'lg'}
+        my={5}
         p={4}
-        textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, My name is Chergang Chang.
+        Hello, I'm Chergang Chang.
+      </Center>
+
+      <Box display={{ md: 'flex' }}>
+        <Text as="p" textAlign={'justify'} style={{ textIndent: '1em' }}>
+          I'm a software developer engineer currently located in Utah. I'm
+          pursuing the opportunity to jump in software developer industry and
+          I'm willing to relocate.
+        </Text>
       </Box>
-      <Box align="center" my={4}>
+
+      <Center my={4}>
         <Link
           href={resume}
           download
@@ -34,15 +46,7 @@ const About = () => {
             My Resume
           </Button>
         </Link>
-      </Box>
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title" align="center">
-            Chergang Chang
-          </Heading>
-          <p>Software developer</p>
-        </Box>
-      </Box>
+      </Center>
     </Container>
   );
 };

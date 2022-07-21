@@ -37,7 +37,7 @@ const Nav = () => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Link href='#'>
+            <Link href="#">
               <Text fontSize="lg" ml={3}>
                 Chergang Chang
               </Text>
@@ -54,16 +54,7 @@ const Nav = () => {
         >
           <HStack spacing={4}>
             <Link
-            href='#skills'
-              p={3}
-              _hover={{
-                textDecoration: 'none',
-                bg: useColorModeValue('gray.200', 'gray.700'),
-              }}
-            >
-              Skills
-            </Link>
-            <Link
+              href="#project"
               p={3}
               _hover={{
                 textDecoration: 'none',
@@ -73,6 +64,7 @@ const Nav = () => {
               Project
             </Link>
             <Link
+              href="#contact"
               p={3}
               _hover={{
                 textDecoration: 'none',
@@ -111,10 +103,9 @@ const Nav = () => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={Link}>About</MenuItem>
-                <MenuItem as={Link}>Skills</MenuItem>
-                <MenuItem as={Link}>Project</MenuItem>
-                <MenuItem as={Link}>Contact</MenuItem>
+                <MenuItem as={Link} href='#'>About</MenuItem>
+                <MenuItem as={Link} href='#project'>Project</MenuItem>
+                <MenuItem as={Link} href='#contact'>Contact</MenuItem>
               </MenuList>
             </Menu>
           </Box>
