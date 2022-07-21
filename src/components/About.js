@@ -9,12 +9,10 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import resume from '../assets/Chergang Chang.pdf';
-import Cat from './Cat';
 
 const About = () => {
   return (
     <Container id="about" minH={'55vh'}>
-      <Cat />
       <Center
         borderRadius="lg"
         boxShadow={'lg'}
