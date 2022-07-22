@@ -11,7 +11,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import netflix from '../assets/img/netflix-clone.png';
-import test from '../assets/img/javascript.png';
+import portfolio from '../assets/img/Portfolio.png';
 import { FiEye, FiGithub } from 'react-icons/fi';
 
 const GridItem = ({ thumbnail, title, link, github, children }) => (
@@ -66,12 +66,12 @@ const Work = () => {
       <Divider my={6} />
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <GridItem
-          thumbnail={test}
+          thumbnail={portfolio}
           title="Portfolio Website"
           link="http://chergang-chang.ml/"
           github="https://github.com/ausidop/portfolio"
         >
-          A Portfolio website using React.js, Chakra UI and hosted by Netlify.
+          A Portfolio website using React.js, Chakra UI, Three.js and hosted by Netlify.
         </GridItem>
         <GridItem
           thumbnail={netflix}

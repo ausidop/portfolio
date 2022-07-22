@@ -1,0 +1,11 @@
+Model Information:
+* title:	White and Black Voxel Cat
+* source:	https://sketchfab.com/3d-models/white-and-black-voxel-cat-d25ff8a86e7b497cbc38bc945bdd693b
+* author:	BatatinhaRussa2021 (https://sketchfab.com/BatatinhaRussa2021)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "White and Black Voxel Cat" (https://sketchfab.com/3d-models/white-and-black-voxel-cat-d25ff8a86e7b497cbc38bc945bdd693b) by BatatinhaRussa2021 (https://sketchfab.com/BatatinhaRussa2021) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
