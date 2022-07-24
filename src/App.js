@@ -8,8 +8,6 @@ import React from 'react';
 import LoadCat from './components/LoadCat';
 import Credit from './components/Credit';
 
-// const LazyCat = React.lazy(() => import('./components/voxel-cat'));
-
 function App() {
   return (
     <Box as="main" pb={8}>
